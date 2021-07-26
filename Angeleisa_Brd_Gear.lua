@@ -12,7 +12,7 @@ function user_job_setup()
 	gear.stp_jse_back = {name="Intarabus's Cape",augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}}
 
 	-- Adjust this if using the Terpander (new +song instrument)
-	info.ExtraSongInstrument = 'Terpander'
+	info.ExtraSongInstrument = 'Blurred Harp +1'
 	-- How many extra songs we can keep from Daurdabla/Terpander
 	info.ExtraSongs = 1
 	
@@ -71,10 +71,10 @@ function init_gear_sets()
 	sets.precast.FC.Lullaby.Resistant = {range="Gjallarhorn"}
 	sets.precast.FC['Horde Lullaby'] = {range="Gjallarhorn"}
 	sets.precast.FC['Horde Lullaby'].Resistant = {range="Gjallarhorn"}
-	sets.precast.FC['Horde Lullaby'].AoE = {range="Gjallarhorn"}
+	sets.precast.FC['Horde Lullaby'].AoE = {range="Blurred Harp +1"}
 	sets.precast.FC['Horde Lullaby II'] = {range="Gjallarhorn"}
 	sets.precast.FC['Horde Lullaby II'].Resistant = {range="Gjallarhorn"}
-	sets.precast.FC['Horde Lullaby II'].AoE = {range="Gjallarhorn"}
+	sets.precast.FC['Horde Lullaby II'].AoE = {range="Blurred Harp +1"}
 		
 	sets.precast.FC.Mazurka = set_combine(sets.precast.FC.BardSong,{range="Marsyas"})
 	sets.precast.FC['Honor March'] = set_combine(sets.precast.FC.BardSong,{range="Marsyas"})
@@ -120,10 +120,10 @@ function init_gear_sets()
 	sets.midcast.Lullaby.Resistant = {range="Gjallarhorn"}
 	sets.midcast['Horde Lullaby'] = {range="Gjallarhorn"}
 	sets.midcast['Horde Lullaby'].Resistant = {range="Gjallarhorn"}
-	sets.midcast['Horde Lullaby'].AoE = {range="Gjallarhorn"}
+	sets.midcast['Horde Lullaby'].AoE = {range="Blurred Harp +1"}
 	sets.midcast['Horde Lullaby II'] = {range="Gjallarhorn"}
 	sets.midcast['Horde Lullaby II'].Resistant = {range="Gjallarhorn"}
-	sets.midcast['Horde Lullaby II'].AoE = {range="Gjallarhorn"}
+	sets.midcast['Horde Lullaby II'].AoE = {range="Blurred Harp +1"}
 	sets.midcast.Madrigal = {head="Fili Calot"}
 	sets.midcast.Paeon = {}
 	sets.midcast.March = {hands="Fili Manchettes"}
@@ -141,23 +141,23 @@ function init_gear_sets()
 		main=gear.kali_macc,sub="Genmei Shield",range="Gjallarhorn",
 		head="Fili Calot",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
 		body="Fili Hongreline",hands="Inyan. Dastanas +1",ring1="Metamor. Ring +1",ring2="Stikini Ring",
-		back=gear.fc_jse_cape,waist="Porous Rope",legs="Inyanga Shalwar +2",feet="Brioso Slippers +1"}
+		back=gear.fc_jse_cape,waist="Porous Rope",legs="Inyanga Shalwar +2",feet="Brioso Slippers +2"}
 		
-	sets.midcast.SongEffect.DW = {main="Kali",sub="Kali"}
+	sets.midcast.SongEffect.DW = {main=gear.kali_macc,sub=gear.kali_idle}
 
 	-- For song defbuffs (duration primary, accuracy secondary)
 	sets.midcast.SongDebuff = {
 		main=gear.kali_macc,sub="Genmei Shield",range="Gjallarhorn",
-		head="Inyanga Tiara +2",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
+		head="Inyanga Tiara +1",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
 		body="Fili Hongreline",hands="Inyan. Dastanas +1",ring1="Metamor. Ring +1",ring2="Stikini Ring",
-		back=gear.fc_jse_cape,waist="Porous Rope",legs="Inyanga Shalwar +2",feet="Brioso Slippers +1"}
+		back=gear.fc_jse_cape,waist="Porous Rope",legs="Inyanga Shalwar +2",feet="Brioso Slippers +2"}
 		
-	sets.midcast.SongDebuff.DW = {main="Kali",sub="Kali"}
+	sets.midcast.SongDebuff.DW = {main=gear.kali_macc,sub=gear.kali_idle}
 
 	-- For song defbuffs (accuracy primary, duration secondary)
 	sets.midcast.SongDebuff.Resistant = {
 		main=gear.kali_macc,sub="Genmei Shield",range="Gjallarhorn",
-		head="Inyanga Tiara +2",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
+		head="Inyanga Tiara +1",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
 		body="Inyanga Jubbah +2",hands="Inyan. Dastanas +1",ring1="Metamor. Ring +1",ring2="Stikini Ring",
 		back=gear.fc_jse_cape,waist="Porous Rope",legs="Inyanga Shalwar +2",feet="Aya. Gambieras +1"}
 
@@ -233,7 +233,7 @@ function init_gear_sets()
 		back="Umbra Cape",waist="Flume Belt",legs="Aya. Cosciales +2",feet=gear.chironic_refresh_feet}
 	
 	sets.idle = {main=gear.kali_idle,sub="Genmei Shield",
-		head="Aya. Zucchetto +1",neck="Bathy Choker +1",ear1="Moonshade Earring",ear2="Etiolation Earring",
+		head="Aya. Zucchetto +1",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Etiolation Earring",
 		body="Ayanmo Corazza +2",hands="Aya. Manopolas +1",ring1="Ayanmo Ring",ring2="Inyanga Ring",
 		back="Kumbira Cape",waist="Flume Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +1"}
 		
