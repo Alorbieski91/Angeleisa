@@ -12,14 +12,14 @@ function user_job_setup()
 	gear.fc_jse_cape = {name="Intarabus's Cape",augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}
 	gear.stp_jse_cape = {name="Intarabus's Cape",augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}}
 	gear.str_jse_back = {name="Intarabus's Cape",augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
-	gear.dex_jse_back = {name="Intarabus's Cape",augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+	gear.dex_jse_back = {name="Intarabus's Cape",augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10',}}
 
 	autows = 'Savage Blade'
 
 	-- Adjust this if using the Terpander (new +song instrument)
-	info.ExtraSongInstrument = 'Blurred Harp +1'
+	info.ExtraSongInstrument = 'Daurdabla'
 	-- How many extra songs we can keep from Daurdabla/Terpander
-	info.ExtraSongs = 1
+	info.ExtraSongs = 2
 	
 	-- Set this to false if you don't want to use custom timers.
 	state.UseCustomTimers = M(false, 'Use Custom Timers')
@@ -51,11 +51,12 @@ function init_gear_sets()
 
 	sets.buff.Sublimation = {waist="Embla Sash"}
 	sets.buff.DTSublimation = {waist="Embla Sash"}
+	sets.buff.Elvorseal = {back=gear.dex_jse_back}
 	
 	-- Precast Sets
 
 	-- Fast cast sets for spells
-	sets.precast.FC = {main=gear.kali_idle,sub="Genmei Shield",range="Gjallarhorn",
+	sets.precast.FC = {main=gear.kali_idle,sub="Genmei Shield",
 		head="Welkin Crown",neck="Voltsurge Torque",ear1="Loquac. Earring",ear2="Etiolation Earring",
 		body="Inyanga Jubbah +2",hands="Leyline Gloves",ring1="Lebeche Ring",ring2="Weather. Ring",
 		back=gear.fc_jse_cape,waist="Embla Sash",legs="Aya. Cosciales +2",feet="Telchine Pigaches"}
@@ -65,7 +66,7 @@ function init_gear_sets()
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {main="Daybreak",sub="Genmei Shield"})
 	
-	sets.precast.FC.BardSong = {main=gear.kali_idle,sub="Genmei Shield",range="Gjallarhorn",
+	sets.precast.FC.BardSong = {main=gear.kali_idle,sub="Genmei Shield",
 		head="Fili Calot +1",neck="Voltsurge Torque",ear1="Loquac. Earring",ear2="Etiolation Earring",
 		body="Inyanga Jubbah +2",hands="Leyline Gloves",ring1="Lebeche Ring",ring2="Weather. Ring",
 		back=gear.fc_jse_cape,waist="Embla Sash",legs="Aya. Cosciales +2",feet="Telchine Pigaches"}
@@ -113,21 +114,21 @@ function init_gear_sets()
 	-- Midcast Sets
 
 	-- General set for recast times.
-	sets.midcast.FastRecast = {main=gear.kali_idle,sub="Genmei Shield",range="Gjallarhorn",
+	sets.midcast.FastRecast = {main=gear.kali_idle,sub="Genmei Shield",
 		head="Welkin Crown",neck="Voltsurge Torque",ear1="Loquac. Earring",ear2="Etiolation Earring",
 		body="Inyanga Jubbah +2",hands="Leyline Gloves",ring1="Lebeche Ring",ring2="Weather. Ring",
 		back=gear.fc_jse_cape,waist="Embla Sash",legs="Aya. Cosciales +2",feet="Telchine Pigaches"}
 
 	-- Gear to enhance certain classes of songs
 	sets.midcast.Ballad = {legs="Fili Rhingrave +1"}
-	sets.midcast.Lullaby = {range="Gjallarhorn"}
-	sets.midcast.Lullaby.Resistant = {range="Gjallarhorn"}
+	sets.midcast.Lullaby = {range="Daurdabla"}
+	sets.midcast.Lullaby.Resistant = {range="Blurred Harp +1"}
 	sets.midcast['Horde Lullaby'] = {range="Gjallarhorn"}
-	sets.midcast['Horde Lullaby'].Resistant = {range="Gjallarhorn"}
-	sets.midcast['Horde Lullaby'].AoE = {range="Blurred Harp +1",hands="Brioso Cuffs +1"}
+	sets.midcast['Horde Lullaby'].Resistant = {range="Blurred Harp +1"}
+	sets.midcast['Horde Lullaby'].AoE = {range="Daurdabla",hands="Brioso Cuffs +1"}
 	sets.midcast['Horde Lullaby II'] = {range="Gjallarhorn"}
-	sets.midcast['Horde Lullaby II'].Resistant = {range="Gjallarhorn"}
-	sets.midcast['Horde Lullaby II'].AoE = {range="Blurred Harp +1",hands="Brioso Cuffs +1"}
+	sets.midcast['Horde Lullaby II'].Resistant = {range="Blurred Harp +1"}
+	sets.midcast['Horde Lullaby II'].AoE = {range="Daurdabla",hands="Brioso Cuffs +1"}
 	sets.midcast.Madrigal = {head="Fili Calot +1"}
 	sets.midcast.Paeon = {}
 	sets.midcast.March = {hands="Fili Manchettes +1"}
@@ -157,16 +158,16 @@ function init_gear_sets()
 	sets.midcast.SongDebuff.DW = {main=gear.kali_macc,sub=gear.kali_idle}
 
 	-- For song defbuffs (accuracy primary, duration secondary)
-	sets.midcast.SongDebuff.Resistant = {main=gear.kali_macc,sub="Genmei Shield",range="Gjallarhorn",
+	sets.midcast.SongDebuff.Resistant = {main=gear.kali_macc,sub="Genmei Shield",
 		head="Inyanga Tiara +2",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
 		body="Inyanga Jubbah +2",hands="Inyan. Dastanas +2",ring1="Metamor. Ring +1",ring2="Stikini Ring",
 		back=gear.fc_jse_cape,waist="Porous Rope",legs="Inyanga Shalwar +2",feet="Brioso Slippers +2"}
 
 	-- Song-specific recast reduction
-	sets.midcast.SongRecast = {main=gear.kali_macc,sub="Genmei Shield",range="Gjallarhorn",
-		head="Nahtirah Hat",neck="Moonbow Whistle",ear1="Loquac. Earring",ear2="Etiolation Earring",
-		body="Inyanga Jubbah +2",hands="Inyan. Dastanas +2",ring1="Metamor. Ring +1",ring2="Stikini Ring",
-		back=gear.fc_jse_cape,waist="Porous Rope",legs="Inyanga Shalwar +2",feet="Telchine Pigaches"}
+	sets.midcast.SongRecast = {main=gear.kali_macc,sub="Genmei Shield",
+		head="Nahtirah Hat",neck="Voltsurge Torque",ear1="Loquac. Earring",ear2="Etiolation Earring",
+		body="Inyanga Jubbah +2",hands="Inyan. Dastanas +2",ring1="Lebeche Ring",ring2="Weather. Ring",
+		back=gear.fc_jse_cape,waist="Embla Sash",legs="Fili Rhingrave +1",feet="Telchine Pigaches"}
 		
 	sets.midcast.SongDebuff.DW = {}
 
