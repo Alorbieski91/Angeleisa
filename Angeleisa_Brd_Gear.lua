@@ -138,14 +138,14 @@ function init_gear_sets()
 	sets.midcast.Carol = {}
 	sets.midcast["Sentinel's Scherzo"] = {feet="Fili Cothurnes +1"}
 	sets.midcast['Magic Finale'] = {range="Gjallarhorn"}
-	sets.midcast.Mazurka = {range="Gjallarhorn"}
+	sets.midcast.Mazurka = {range="Marsyas"}
 	
 
 	-- For song buffs (duration and AF3 set bonus)
 	sets.midcast.SongEffect = {main=gear.kali_macc,sub="Genmei Shield",range="Gjallarhorn",
 		head="Fili Calot +1",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
 		body="Fili Hongreline +1",hands="Inyan. Dastanas +2",ring1="Metamor. Ring +1",ring2="Stikini Ring",
-		back=gear.fc_jse_cape,waist="Porous Rope",legs="Inyanga Shalwar +2",feet="Brioso Slippers +2"}
+		back=gear.fc_jse_cape,waist="Eschan Stone",legs="Inyanga Shalwar +2",feet="Brioso Slippers +2"}
 		
 	sets.midcast.SongEffect.DW = {main=gear.kali_macc,sub=gear.kali_idle}
 
@@ -153,7 +153,7 @@ function init_gear_sets()
 	sets.midcast.SongDebuff = {main=gear.kali_macc,sub="Genmei Shield",range="Gjallarhorn",
 		head="Inyanga Tiara +2",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
 		body="Fili Hongreline +1",hands="Inyan. Dastanas +2",ring1="Metamor. Ring +1",ring2="Stikini Ring",
-		back=gear.fc_jse_cape,waist="Porous Rope",legs="Inyanga Shalwar +2",feet="Brioso Slippers +2"}
+		back=gear.fc_jse_cape,waist="Eschan Stone",legs="Inyanga Shalwar +2",feet="Brioso Slippers +2"}
 		
 	sets.midcast.SongDebuff.DW = {main=gear.kali_macc,sub=gear.kali_idle}
 
@@ -161,7 +161,7 @@ function init_gear_sets()
 	sets.midcast.SongDebuff.Resistant = {main=gear.kali_macc,sub="Genmei Shield",
 		head="Inyanga Tiara +2",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
 		body="Inyanga Jubbah +2",hands="Inyan. Dastanas +2",ring1="Metamor. Ring +1",ring2="Stikini Ring",
-		back=gear.fc_jse_cape,waist="Porous Rope",legs="Inyanga Shalwar +2",feet="Brioso Slippers +2"}
+		back=gear.fc_jse_cape,waist="Eschan Stone",legs="Inyanga Shalwar +2",feet="Brioso Slippers +2"}
 
 	-- Song-specific recast reduction
 	sets.midcast.SongRecast = {main=gear.kali_macc,sub="Genmei Shield",
@@ -231,36 +231,36 @@ function init_gear_sets()
 
 	-- Resting sets
 	sets.resting = {main="Chatoyant Staff",sub="Oneiros Grip",ammo="Staunch Tathlum +1",
-		head="Aya. Zucchetto +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-		body="Ayanmo Corazza +2",hands=gear.chironic_refresh_hands,ring1="Ayanmo Ring",ring2="Inyanga Ring",
-		back=gear.str_jse_back,waist="Flume Belt",legs="Aya. Cosciales +2",feet=gear.chironic_refresh_feet}
+		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
+		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Ayanmo Ring",ring2="Inyanga Ring",
+		back=gear.str_jse_back,waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 	
 	sets.idle = {main=gear.kali_idle,sub="Genmei Shield",
-		head="Aya. Zucchetto +2",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Etiolation Earring",
-		body="Ayanmo Corazza +2",hands="Aya. Manopolas +1",ring1="Ayanmo Ring",ring2="Inyanga Ring",
-		back=gear.str_jse_back,waist="Flume Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
+		head="Nyame Helm",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Etiolation Earring",
+		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Ayanmo Ring",ring2="Inyanga Ring",
+		back=gear.str_jse_back,waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 		
 	sets.idle.NoRefresh = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum +1",
-		head="Aya. Zucchetto +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-		body="Ayanmo Corazza +2",hands="Aya. Manopolas +1",ring1="Ayanmo Ring",ring2="Inyanga Ring",
-		back=gear.str_jse_back,waist="Flume Belt",legs="Aya. Cosciales +2",feet="Fili Cothurnes +1"}
+		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
+		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Ayanmo Ring",ring2="Inyanga Ring",
+		back=gear.str_jse_back,waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
 	sets.idle.DT = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum +1",
-		head="Aya. Zucchetto +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-		body="Ayanmo Corazza +2",hands="Aya. Manopolas +1",ring1="Ayanmo Ring",ring2="Inyanga Ring",
-		back=gear.str_jse_back,waist="Flume Belt",legs="Aya. Cosciales +2",feet="Inyan. Crackows +2"}
+		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
+		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Ayanmo Ring",ring2="Inyanga Ring",
+		back=gear.str_jse_back,waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 	
 	-- Defense sets
 
 	sets.defense.PDT = {main="Terra's Staff", sub="Umbra Strap",ammo="Staunch Tathlum +1",
-		head="Aya. Zucchetto +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-		body="Ayanmo Corazza +2",hands=gear.chironic_refresh_hands,ring1="Ayanmo Ring",ring2="Inyanga Ring",
-		back=gear.str_jse_back,waist="Flume Belt",legs="Assid. Pants +1",feet=gear.chironic_refresh_feet}
+		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
+		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Ayanmo Ring",ring2="Inyanga Ring",
+		back=gear.str_jse_back,waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
 	sets.defense.MDT = {main="Terra's Staff", sub="Umbra Strap",ammo="Staunch Tathlum +1",
-		head="Aya. Zucchetto +2",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
-		body="Ayanmo Corazza +2",hands=gear.chironic_refresh_hands,ring1="Ayanmo Ring",ring2="Inyanga Ring",
-		back="Umbra Cape",waist="Flume Belt",legs="Assid. Pants +1",feet=gear.chironic_refresh_feet}
+		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
+		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Ayanmo Ring",ring2="Inyanga Ring",
+		back="Umbra Cape",waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
 	sets.Kiting = {feet="Fili Cothurnes +1"}
 	sets.latent_refresh = {waist="Fucho-no-obi"}
@@ -344,7 +344,7 @@ end
 function check_song()
 	if state.AutoSongMode.value then
 		if not buffactive.march then
-			windower.chat.input('/ma "Victory March" <me>')
+			windower.chat.input('/ma "Honor March" <me>')
 			tickdelay = os.clock() + 2
 			return true
 		elseif not buffactive.minuet then
