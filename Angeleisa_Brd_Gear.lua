@@ -67,7 +67,7 @@ function init_gear_sets()
 	sets.precast.FC.Cure = set_combine(sets.precast.FC, {feet="Vanya Clogs"})
 
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
-	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {main="Daybreak",sub="Genmei Shield"})
+	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {main="Daybreak",sub="Ammurapi Shield"})
 	
 	sets.precast.FC.BardSong = {main=gear.kali_idle,sub="Genmei Shield",
 		head="Fili Calot +1",neck="Voltsurge Torque",ear1="Loquac. Earring",ear2="Etiolation Earring",
@@ -153,13 +153,13 @@ function init_gear_sets()
 	sets.midcast.SongEffect.DW = {main=gear.kali_macc,sub=gear.kali_idle}
 
 	-- For song defbuffs (duration primary, accuracy secondary)
-	sets.midcast.SongDebuff = {main=gear.kali_macc,sub="Genmei Shield",range="Gjallarhorn",
+	sets.midcast.SongDebuff = {main=gear.kali_macc,sub="Ammurapi Shield",range="Gjallarhorn",
 		head="Brioso Roundlet +2",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
 		body="Fili Hongreline +1",hands="Brioso Cuffs +2",ring1="Metamor. Ring +1",ring2="Stikini Ring",
 		back=gear.fc_jse_cape,waist="Luminary Sash",legs="Inyanga Shalwar +2",feet="Brioso Slippers +2"}
 
 	-- For song defbuffs (accuracy primary, duration secondary)
-	sets.midcast.SongDebuff.Resistant = {main=gear.kali_macc,sub="Genmei Shield",
+	sets.midcast.SongDebuff.Resistant = {main=gear.kali_macc,sub="Ammurapi Shield",
 		head="Brioso Roundlet +2",neck="Moonbow Whistle",ear1="Gwati Earring",ear2="Bragi Earring",
 		body="Brioso Justau. +2",hands="Brioso Cuffs +2",ring1="Metamor. Ring +1",ring2="Stikini Ring",
 		back=gear.fc_jse_cape,waist="Luminary Sash",legs="Brioso Cannions +2",feet="Brioso Slippers +2"}
@@ -179,10 +179,10 @@ function init_gear_sets()
 	sets.midcast.DaurdablaDummy = set_combine(sets.midcast.SongRecast, {range=info.ExtraSongInstrument})
 
 	-- Other general spells and classes.
-	sets.midcast.Cure = {main="Serenity",sub="Curatio Grip",ammo="Pemphredo Tathlum",
-		head="Gende. Caubeen +1",neck="Incanter's Torque",ear1="Gifted Earring",ear2="Mendi. Earring",
-		body="Kaykaus Bliaut",hands="Kaykaus Cuffs",ring1="Janniston Ring",ring2="Menelaus's Ring",
-		back="Tempered Cape +1",waist="Luminary Sash",legs="Carmine Cuisses +1",feet="Kaykaus Boots"}
+	sets.midcast.Cure = {main="Daybreak",sub="Ammurapi Shield",ammo="Pemphredo Tathlum",
+		head="Vanya Hood",neck="Henic Torque",ear1="Gifted Earring",ear2="Mendi. Earring",
+		body="Vanya Robe",hands="Inyan. Dastanas +2",ring1="Lebeche Ring",ring2="Stikini Ring",
+		back="Tempered Cape +1",waist="Luminary Sash",legs="Vanya Slops",feet="Inyan. Crackows +2"}
 		
 	sets.midcast.Curaga = sets.midcast.Cure
 		
@@ -203,7 +203,7 @@ function init_gear_sets()
 		waist="Gishdubar Sash"
 	}
 		
-	sets.midcast['Enhancing Magic'] = {main="Serenity",sub="Fulcio Grip",ammo="Hasty Pinion +1",
+	sets.midcast['Enhancing Magic'] = {main=gear.kali_macc,sub="Ammurapi Shield",ammo="Hasty Pinion +1",
 		head="Telchine Cap",neck="Voltsurge Torque",ear1="Andoaa Earring",ear2="Gifted Earring",
 		body="Telchine Chas.",hands="Telchine Gloves",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
 		back="Intarabus's Cape",waist="Embla Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}
@@ -231,22 +231,22 @@ function init_gear_sets()
 	sets.midcast.StatusRemoval = set_combine(sets.midcast.FastRecast, {main=gear.grioavolr_fc_staff,sub="Clemency Grip"})
 
 	-- Resting sets
-	sets.resting = {main="Chatoyant Staff",sub="Oneiros Grip",ammo="Staunch Tathlum +1",
+	sets.resting = {main="Chatoyant Staff",sub="Oneiros Grip",ammo="Staunch Tathlum",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Inyanga Ring",
 		back=gear.str_jse_back,waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 	
-	sets.idle = {main=gear.kali_idle,sub="Genmei Shield",
+	sets.idle = {main="Daybreak",sub="Genmei Shield",
 		head="Inyanga Tiara +2",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Etiolation Earring",
 		body="Inyanga Jubbah +2",hands="Inyan. Dastanas +2",ring1="Defending Ring",ring2="Inyanga Ring",
 		back=gear.str_jse_back,waist="Flume Belt",legs="Inyanga Shalwar +2",feet="Inyan. Crackows +2"}
 
-	sets.idle.DT = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum +1",
+	sets.idle.DT = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Inyanga Ring",
 		back=gear.str_jse_back,waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
-	sets.idle.NoRefresh = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum +1",
+	sets.idle.NoRefresh = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Inyanga Ring",
 		back=gear.str_jse_back,waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
@@ -255,12 +255,12 @@ function init_gear_sets()
 	
 	-- Defense sets
 
-	sets.defense.PDT = {main="Terra's Staff", sub="Umbra Strap",ammo="Staunch Tathlum +1",
+	sets.defense.PDT = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Inyanga Ring",
 		back=gear.str_jse_back,waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
-	sets.defense.MDT = {main="Terra's Staff", sub="Umbra Strap",ammo="Staunch Tathlum +1",
+	sets.defense.MDT = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum",
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Ethereal Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Inyanga Ring",
 		back="Umbra Cape",waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
