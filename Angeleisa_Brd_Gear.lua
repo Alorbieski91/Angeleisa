@@ -9,7 +9,7 @@ function user_job_setup()
 	gear.kali_idle = {name="Kali",augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}}
 	gear.kali_macc = {name="Kali",augments={'DMG:+15','CHR+15','Mag. Acc.+15',}}
 
-	gear.fc_jse_cape = {name="Intarabus's Cape",augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}
+	gear.fc_jse_cape = {name="Intarabus's Cape",augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}}
 	gear.stp_jse_cape = {name="Intarabus's Cape",augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}}
 	gear.str_jse_back = {name="Intarabus's Cape",augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 	gear.dex_jse_back = {name="Intarabus's Cape",augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10',}}
@@ -136,7 +136,7 @@ function init_gear_sets()
 	sets.midcast['Horde Lullaby II'].Resistant = {range="Gjallarhorn"}
 	sets.midcast['Horde Lullaby II'].AoE = {range="Daurdabla"}
 	sets.midcast.Madrigal = {head="Fili Calot +1"}
-	sets.midcast.Paeon = {head="Brioso Roundlet +2"}
+	sets.midcast.Paeon = {head="Brioso Roundlet +3"}
 	sets.midcast.March = {hands="Fili Manchettes +1"}
 	sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
 	sets.midcast.Minuet = {body="Fili Hongreline +1"}
@@ -157,13 +157,13 @@ function init_gear_sets()
 
 	-- For song defbuffs (duration primary, accuracy secondary)
 	sets.midcast.SongDebuff = {main=gear.kali_macc,sub="Ammurapi Shield",range="Gjallarhorn",
-		head="Brioso Roundlet +2",neck="Mnbw. Whistle +1",ear1="Digni. Earring",ear2="Darkside Earring",
+		head="Brioso Roundlet +3",neck="Mnbw. Whistle +1",ear1="Digni. Earring",ear2="Darkside Earring",
 		body="Fili Hongreline +1",hands="Brioso Cuffs +3",ring1="Metamor. Ring +1",ring2="Stikini Ring",
 		back=gear.fc_jse_cape,waist="Luminary Sash",legs="Inyanga Shalwar +2",feet="Brioso Slippers +3"}
 
 	-- For song defbuffs (accuracy primary, duration secondary)
 	sets.midcast.SongDebuff.Resistant = {main=gear.kali_macc,sub="Ammurapi Shield",
-		head="Brioso Roundlet +2",neck="Mnbw. Whistle +1",ear1="Digni. Earring",ear2="Darkside Earring",
+		head="Brioso Roundlet +3",neck="Mnbw. Whistle +1",ear1="Digni. Earring",ear2="Darkside Earring",
 		body="Brioso Justau. +2",hands="Brioso Cuffs +3",ring1="Metamor. Ring +1",ring2="Stikini Ring",
 		back=gear.fc_jse_cape,waist="Luminary Sash",legs="Brioso Cannions +2",feet="Brioso Slippers +3"}
 
