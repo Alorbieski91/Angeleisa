@@ -76,14 +76,14 @@ function init_gear_sets()
 
 	sets.precast.FC.SongDebuff = set_combine(sets.precast.FC.BardSong,{range="Marsyas"})
 	sets.precast.FC.SongDebuff.Resistant = set_combine(sets.precast.FC.BardSong,{range="Gjallarhorn"})
-	sets.precast.FC.Lullaby = {range="Blurred Harp +1"}
-	sets.precast.FC.Lullaby.Resistant = {range="Gjallarhorn"}
-	sets.precast.FC['Horde Lullaby'] = {range="Blurred Harp +1"}
-	sets.precast.FC['Horde Lullaby'].Resistant = {range="Gjallarhorn"}
-	sets.precast.FC['Horde Lullaby'].AoE = {range="Daurdabla"}
-	sets.precast.FC['Horde Lullaby II'] = {range="Blurred Harp +1"}
-	sets.precast.FC['Horde Lullaby II'].Resistant = {range="Gjallarhorn"}
-	sets.precast.FC['Horde Lullaby II'].AoE = {range="Daurdabla"}
+	sets.precast.FC.Lullaby = set_combine(sets.precast.FC.BardSong,{range="Blurred Harp +1"})
+	sets.precast.FC.Lullaby.Resistant = set_combine(sets.precast.FC.BardSong,{range="Gjallarhorn"})
+	sets.precast.FC['Horde Lullaby'] = set_combine(sets.precast.FC.BardSong,{range="Blurred Harp +1"})
+	sets.precast.FC['Horde Lullaby'].Resistant = set_combine(sets.precast.FC.BardSong,{range="Gjallarhorn"})
+	sets.precast.FC['Horde Lullaby'].AoE = set_combine(sets.precast.FC.BardSong,{range="Daurdabla"})
+	sets.precast.FC['Horde Lullaby II'] = set_combine(sets.precast.FC.BardSong,{range="Blurred Harp +1"})
+	sets.precast.FC['Horde Lullaby II'].Resistant = set_combine(sets.precast.FC.BardSong,{range="Gjallarhorn"})
+	sets.precast.FC['Horde Lullaby II'].AoE = set_combine(sets.precast.FC.BardSong,{range="Daurdabla"})
 		
 	sets.precast.FC.Mazurka = set_combine(sets.precast.FC.BardSong,{range="Marsyas"})
 	sets.precast.FC['Honor March'] = set_combine(sets.precast.FC.BardSong,{range="Marsyas"})
@@ -184,8 +184,8 @@ function init_gear_sets()
 	-- Other general spells and classes.
 	sets.midcast.Cure = {main="Daybreak",sub="Ammurapi Shield",ammo="Pemphredo Tathlum",
 		head="Vanya Hood",neck="Incanter's Torque",ear1="Gifted Earring",ear2="Mendi. Earring",
-		body="Vanya Robe",hands="Inyan. Dastanas +2",ring1="Lebeche Ring",ring2="Stikini Ring",
-		back="Tempered Cape +1",waist="Luminary Sash",legs="Vanya Slops",feet="Inyan. Crackows +2"}
+		body="Bunzi's Robe",hands="Inyan. Dastanas +2",ring1="Lebeche Ring",ring2="Stikini Ring",
+		back="Tempered Cape +1",waist="Luminary Sash",legs="Vanya Slops",feet="Bunzi's Sabots"}
 		
 	sets.midcast.Curaga = sets.midcast.Cure
 		
@@ -264,9 +264,9 @@ function init_gear_sets()
 		back=gear.str_jse_back,waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
 	sets.defense.MDT = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum",
-		head="Nyame Helm",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Eabani Earring",
-		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Defending Ring",ring2="Inyanga Ring",
-		back="Umbra Cape",waist="Flume Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
+		head="Bunzi's Hat",neck="Warder's Charm +1",ear1="Etiolation Earring",ear2="Eabani Earring",
+		body="Bunzi's Robe",hands="Bunzi's Gloves",ring1="Defending Ring",ring2="Inyanga Ring",
+		back=gear.str_jse_back,waist="Flume Belt",legs="Bunzi's Pants",feet="Bunzi's Sabots"}
 
 	sets.Kiting = {feet="Fili Cothurnes +1"}
 	sets.latent_refresh = {waist="Fucho-no-obi"}
